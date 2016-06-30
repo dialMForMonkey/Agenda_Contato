@@ -1,0 +1,20 @@
+{
+  "name": "fontr-angular",
+  "description": "agenda de contatos",
+  "main": "index.js",
+  "authors": [
+    "dialMForMonkey <gabrielsouza849@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}

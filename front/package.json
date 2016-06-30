@@ -1,0 +1,12 @@
+{
+  "name": "fontr-angular",
+  "version": "0.0.1",
+  "description": "parte do front ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": ""
+  },
+  "author": "",
+  "license": "ISC"
+}

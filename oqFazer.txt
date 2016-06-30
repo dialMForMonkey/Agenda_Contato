@@ -1,0 +1,19 @@
+agenda de contatos
+-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+cadastro usuario
+            usuario
+            senha
+login usuario
+lembrar senha usuario
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+cadastar contato
+excluir  contato
+alterar  contato
+ler 	 contato
+
+-*-*-*-*-*-*-*-*-*-*-*-*-*
+fazendo
+criando estrutura API

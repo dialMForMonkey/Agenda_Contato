@@ -1,0 +1,21 @@
+{
+  "name": "contatos",
+  "version": "1.0.0",
+  "description": "agenda de contatos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dialMForMonkey",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^13.4.1",
+    "hapi-swaggered": "^2.6.0",
+    "hapi-swaggered-ui": "^2.3.1",
+    "inert": "^4.0.0",
+    "joi": "^8.4.2",
+    "lout": "^9.0.1",
+    "mongoose": "^4.5.2",
+    "vision": "^4.1.0"
+  }
+}
