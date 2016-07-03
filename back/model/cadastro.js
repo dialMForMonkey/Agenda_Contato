@@ -6,6 +6,6 @@ module.exports = function(usuario, mongoose, schemaUsuario, call) {
         if (err) {
             return call(err);
         }
-        return call('criado');
+        return call();
     });
 };

@@ -1,5 +1,5 @@
 var schema = require('../fabric'),
-    cript = require('crypto'),
+    crypto = require('crypto'),
     chave = require('../config.json').chaveCriptorgrafia;
 
 module.exports = function(validate) {
@@ -18,10 +18,12 @@ module.exports = function(validate) {
             },
             handler: function(req, reply) {
                 //modulo, schema, call
-                cript.createHmac('sha512', chave);
-                cript.update(req.payload.senha);
-                req.payload.senha = cript.digest('hex');
+                debugger
+                var instCript = crypto.createHmac('sha512', chave);
+                instCript.update(req.payload.senha);
+                req.payload.senha = instCript.digest('hex');
                 schema(req.payload, '../model/cadastro.js', 'usuario', function(err) {
+                  debugger
                     if (err) {
                         return reply(500, {
                             'erro': 'usuario nao pode ser cadastrado'

@@ -4,8 +4,10 @@ var Joi = require('joi');
 var fs = require('fs');
 var path = require('path');
 var config = require('./config.json');
-var dirRouter = fs.readdirSync(path.resolve(config.router));
-var dirRegister = fs.readdirSync(path.resolve(config.register));
+var carregarModulos = require('./helpers/carregarModulos');
+var dirRouter = carregarModulos(config.router);
+var dirRegister = carregarModulos(config.register);
+
 
 server.connection({
     port: 3000,
@@ -14,7 +16,7 @@ server.connection({
 
 var modulosARegistrados = [];
 dirRegister.forEach(function(item) {
-    modulosARegistrados = modulosARegistrados.concat(require(`${path.resolve(config.register)}\\${item}`)());
+    modulosARegistrados = modulosARegistrados.concat(require(item)());
 });
 server.register(
   modulosARegistrados, {
@@ -26,7 +28,7 @@ server.register(
         throw err;
     }
     dirRouter.forEach(function(item) {
-        server.route(require(`${path.resolve(config.router)}\\${item}`)(Joi));
+        server.route(require(item)(Joi));
     });
 });
 
