@@ -1,6 +1,9 @@
 {
   "router":"./routers",
   "register":"./registers",
-  "chaveCriptorgrafia":"L)(IOK*&¨%$())"
+  "chaves":{
+    "criptorgrafiaPassword":"L)(IOK*&¨%$())",
+    "tokenKey":"BbZJjyoXAdr8BUZuiKKARWimKfrSmQ6fv8kZ7OFfc"
+  }
 
 }

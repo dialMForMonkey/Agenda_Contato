@@ -1,26 +1,21 @@
 var fs = require('fs');
-var path = require('path')
-var arquivos = [];
+var path = require('path');
 
 function add(caminho) {
-  debugger
-    var array = arguments[1]||[];
-    var x = fs.readdirSync(caminho);
+  var array = arguments[1] || [];
+  var x = fs.readdirSync(caminho);
 
-    x.map(function(item) {
-        if (/\.js$/.test(item)) {
-            array.push(caminho + '/' + item);
-        } else {
-            add(caminho + '/' + item , array);
-        }
-    });
-
-    return array;
+  x.map(function(item) {
+    if (/\.js$/.test(item)) {
+      array.push(caminho + '/' + item);
+    } else {
+      add(caminho + '/' + item, array);
+    }
+  });
+  return array;
 }
 
 module.exports = function(caminho) {
-    debugger
-    var arquivos = add(path.resolve(caminho));
-    console.log('arquivos' , arquivos);
-    return arquivos;
+  var arquivos = add(path.resolve(caminho));
+  return arquivos;
 };
